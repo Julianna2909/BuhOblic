@@ -1,0 +1,30 @@
+{
+  "Recipes": [
+    {
+      "recipeName": "fd",
+      "recipeComponents": [
+        {
+          "ingredientId": 0,
+          "weight": 34.0
+        },
+        {
+          "ingredientId": 1,
+          "weight": 43.0
+        }
+      ],
+      "id": 0
+    }
+  ],
+  "Ingredients": [
+    {
+      "ingredientName": "dsa",
+      "price": 231.0,
+      "id": 0
+    },
+    {
+      "ingredientName": "asd",
+      "price": 58.0,
+      "id": 1
+    }
+  ]
+}
