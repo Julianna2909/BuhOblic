@@ -26,7 +26,10 @@ namespace Models
 
 		[JsonIgnore]
 		public float TotalPrice => recipeComponents.Count > 0
-			? recipeComponents.Sum(c => GameManager.Instance.Database.GetIngredient(c.ingredientId)?.price ?? 0)
+			? recipeComponents.Sum(c =>
+			{
+				return GameManager.Instance.Database.GetIngredient(c.ingredientId)?.price * c.weight  ?? 0;
+			})
 			: 0f;
 		[JsonIgnore]
 		public float TotalWeight => recipeComponents.Count > 0 ? recipeComponents.Sum(c => c.Ingredient != null ? c.weight : 0) : 0f;
@@ -40,5 +43,11 @@ namespace Models
 
 		[JsonIgnore]
 		public Ingredient Ingredient => GameManager.Instance.Database.GetIngredient(ingredientId);
+	}
+
+	[Serializable]
+	public sealed class Order : BaseRecord
+	{
+		public List<int> dishes = new List<int>();
 	}
 }

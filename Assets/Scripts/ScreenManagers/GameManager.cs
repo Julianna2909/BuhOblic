@@ -12,6 +12,7 @@ namespace ScreenManagers
         [SerializeField] private string databasePath;
         [SerializeField] private RecipesListScreen recipesListScreen;
         [SerializeField] private StorageScreen storageScreen;
+        [SerializeField] private OrdersListScreen ordersListScreen;
         
         private Dictionary<ScreenManagerType, ScreenManager> screenManagers;
 
@@ -24,11 +25,14 @@ namespace ScreenManagers
             
             Instance = this;
             recipesListScreen.StorageButtonClicked += SetStorageScreenActive;
+            recipesListScreen.OrdersButtonClicked += SetOrdersListScreenActive;
             storageScreen.BackButtonClicked += SetRecipesListScreenActive;
+            ordersListScreen.BackButtonClicked += SetRecipesListScreenActive;
             screenManagers = new Dictionary<ScreenManagerType, ScreenManager>
             {
                 {ScreenManagerType.RecipesListScreen, recipesListScreen},
                 {ScreenManagerType.StorageScreen, storageScreen},
+                {ScreenManagerType.OrdersListScreen, ordersListScreen},
             };
             SetRecipesListScreenActive();
         }
@@ -68,6 +72,16 @@ namespace ScreenManagers
                     else s.Value.Hide();
                 });
         }
+        
+        private void SetOrdersListScreenActive()
+        {
+            screenManagers.ToList()
+                .ForEach(s =>
+                {
+                    if (s.Key == ScreenManagerType.OrdersListScreen) s.Value.Show();
+                    else s.Value.Hide();
+                });
+        }
     
         private void SetStorageScreenActive()
         {
@@ -83,6 +97,7 @@ namespace ScreenManagers
     public enum ScreenManagerType
     {
         RecipesListScreen,
-        StorageScreen
+        StorageScreen,
+        OrdersListScreen
     }
 }

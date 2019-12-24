@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 105.8, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 570.7, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1927202794084341459
 CanvasRenderer:
@@ -300,6 +300,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Id
       objectReference: {fileID: 0}
+    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3343341558623476376, guid: d873f89a92bbc7442830ccb71009cb20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -405,26 +425,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477006046322573864, guid: d873f89a92bbc7442830ccb71009cb20,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d873f89a92bbc7442830ccb71009cb20, type: 3}
 --- !u!224 &8577002567199989656 stripped
@@ -456,6 +456,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DeleteButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5251964903954154747, guid: 51199a78f08208b4fae509e7e1e928c5,
         type: 3}
@@ -561,26 +581,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5251964903954154749, guid: 51199a78f08208b4fae509e7e1e928c5,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51199a78f08208b4fae509e7e1e928c5, type: 3}

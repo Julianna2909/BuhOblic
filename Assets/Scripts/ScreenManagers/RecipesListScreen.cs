@@ -11,11 +11,13 @@ namespace ScreenManagers
 	public sealed class RecipesListScreen : ScreenManager
 	{
 		public event Action StorageButtonClicked;
+		public event Action OrdersButtonClicked;
 
 		[SerializeField] private RecipeScreen recipeScreen;
 		[SerializeField] private EnterNewRecipeNamePanel newRecipeNamePanel;
 		[SerializeField] private Button addRecipeButton;
 		[SerializeField] private Button storageButton;
+		[SerializeField] private Button ordersButton;
 		[SerializeField] private RecipeView recipeViewPrefab;
 		[SerializeField] private Transform recipeViewTable;
 
@@ -30,11 +32,15 @@ namespace ScreenManagers
 			addRecipeButton.onClick.AddListener(OnAddButtonClicked);
 			storageButton.onClick.RemoveAllListeners();
 			storageButton.onClick.AddListener(OnStorageButtonClicked);
+			ordersButton.onClick.RemoveAllListeners();
+			ordersButton.onClick.AddListener(OnOrdersButtonClicked);
 
 			recipeViews?.ForEach(v => Destroy(v.gameObject));
 			recipeViews = new List<RecipeView>();
 			GameManager.Instance.Database.Recipes.ForEach(AddView);
 		}
+
+		private void OnOrdersButtonClicked() => OrdersButtonClicked?.Invoke();
 
 		public override void Hide() => gameObject.SetActive(false);
 
